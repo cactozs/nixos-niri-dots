@@ -1,0 +1,5 @@
+spawn-at-startup "waybar"
+spawn-at-startup "awww-daemon"
+spawn-at-startup "sh" "-c" "wl-paste --type text --watch cliphist store"
+spawn-at-startup "sh" "-c" "wl-paste --type image --watch cliphist store"
+spawn-at-startup "swayidle -w timeout 300 'hyprlock' timeout 450 'niri msg action power-off-monitors' before-sleep 'hyprlock'"

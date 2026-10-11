@@ -1,0 +1,159 @@
+@import "colors.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+}
+
+window#waybar {
+    background: @bg;
+    color: @fg;
+}
+
+/* Smooth transitions */
+
+#workspaces button,
+#backlight,
+#custom-system,
+#pulseaudio,
+#battery,
+#custom-power,
+#window,
+#clock,
+#language,
+#custom-time {
+    transition:
+        color 150ms ease,
+        background 150ms ease,
+        opacity 150ms ease;
+}
+
+/* Workspaces */
+
+#workspaces {
+    margin-left: 6px;
+}
+
+#workspaces button {
+    color: @ws-inactive;
+    padding: 0 8px;
+    margin: 0;
+    background: transparent;
+}
+
+#workspaces button:hover {
+    color: @ws-hover-fg;
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: @ws-active-fg;
+    background: @ws-active-bg;
+}
+
+/* Window */
+
+#window {
+    margin-left: 14px;
+    margin-right: 8px;
+    color: @fg;
+    opacity: 0.55;
+}
+
+#window:hover {
+    opacity: 1;
+}
+
+/* Center */
+
+#language,
+#clock.time {
+    margin: 0;
+    padding: 0 10px;
+    background: transparent;
+}
+
+#language {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+#clock.date {
+    margin: 3px 3px;
+    padding: 0 14px;
+    background: @module-bg;
+    font-weight: 600;
+}
+
+#clock.time {
+    margin-left: 3px;
+    font-weight: 500;
+}
+
+/* System */
+
+#backlight,
+#custom-system,
+#pulseaudio,
+#battery {
+    margin: 0;
+    padding: 0 9px;
+    background: transparent;
+}
+
+#backlight:hover,
+#custom-system:hover,
+#pulseaudio:hover,
+#battery:hover {
+    color: @ws-hover-fg;
+    background: transparent;
+}
+
+/* Battery states */
+
+#battery.warning {
+    color: @fg;
+    font-weight: 700;
+}
+
+#battery.critical:not(.charging) {
+    background: @fg;
+    color: @bg;
+    font-weight: 700;
+}
+
+#battery.charging {
+    text-decoration: underline;
+}
+
+/* Power */
+
+#custom-power {
+    margin: 3px 6px 3px 3px;
+    padding: 0 12px;
+    background: @module-bg;
+    color: @fg;
+    opacity: 1;
+}
+
+#custom-power:hover {
+    background: @ws-hover-bg;
+    color: @fg;
+    opacity: 1;
+}
+
+/* Tooltips */
+
+tooltip {
+    background: @bg;
+    border: 1px solid @module-bg;
+    border-radius: 0;
+}
+
+tooltip label {
+    color: @fg;
+    padding: 5px;
+}

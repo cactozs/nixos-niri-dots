@@ -1,0 +1,101 @@
+// https://niri-wm.github.io/niri/Configuration:-Layout
+
+layout {
+    gaps 10
+
+    // When to center a column when changing focus, options are:
+    // - "never", default behavior, focusing an off-screen column will keep at the left
+    //   or right edge of the screen.
+    // - "always", the focused column will always be centered.
+    // - "on-overflow", focusing a column will center it if it doesn't fit
+    //   together with the previously focused column.
+    center-focused-column "never"
+
+    // Mod + R
+    preset-column-widths {
+        proportion 0.3
+        proportion 0.5
+        proportion 1.0
+
+        // fixed 1920
+    }
+
+    default-column-width { proportion 1.0; }
+    // If you leave the brackets empty, the windows themselves will decide their initial width.
+    // default-column-width {}
+
+    // By default focus ring and border are rendered as a solid background rectangle
+    // behind windows. That is, they will show up through semitransparent windows.
+    // This is because windows using client-side decorations can have an arbitrary shape.
+    //
+    // If you don't like that, you should uncomment `prefer-no-csd` below.
+    // Niri will draw focus ring and border *around* windows that agree to omit their
+    // client-side decorations.
+    //
+    // Alternatively, you can override it with a window rule called
+    // `draw-border-with-background`.
+
+    // You can change how the focus ring looks.
+    focus-ring {
+        off
+
+        width 1
+
+        // Colors can be set in a variety of ways:
+
+        // - CSS named colors: "red"
+        // - RGB hex: "#rgb", "#rgba", "#rrggbb", "#rrggbbaa"
+        // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
+        // active-color "#ffffff"
+        // inactive-color "#59ffffff"
+
+        // You can also use gradients.
+        active-gradient from="#ffffff" to="#444444" angle=180
+        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
+
+    border {
+        on
+
+        width 1
+        active-color "#ffffff"
+        inactive-color "#59ffffff"
+
+        // Color of the border around windows that request your attention.
+        urgent-color "#ffffffff"
+
+        // Gradients can use a few different interpolation color spaces.
+        // For example, this is a pastel rainbow gradient via in="oklch longer hue".
+        // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+
+        active-gradient from="#ffffff66" to="#44444466" angle=150
+        inactive-gradient from="#3b3b3bb3" to="#2b2b2bb3" angle=150
+    }
+
+    // You can enable drop shadows for windows.
+    shadow {
+        on
+
+        // draw-behind-window true
+
+        // Softness controls the shadow blur radius.
+        softness 30
+
+        // Spread expands the shadow.
+        spread 5
+
+        // Offset moves the shadow relative to the window.
+        offset x=0 y=5
+
+        // You can also change the shadow color and opacity.
+        color "#0007"
+    }
+
+    struts {
+        // left 64
+        // right 64
+        // top 64
+        // bottom 64
+    }
+}

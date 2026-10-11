@@ -1,0 +1,12 @@
+/* Black OLED — только #000/#fff + прозрачность */
+@define-color bg              #000000;
+@define-color fg              #ffffff;
+
+@define-color ws-active-bg    #ffffff;
+@define-color ws-active-fg    #000000;
+@define-color ws-hover-bg     rgba(255, 255, 255, 0.15);
+@define-color ws-hover-fg     rgba(255, 255, 255, 0.75);
+@define-color ws-inactive     rgba(255, 255, 255, 0.45);
+
+@define-color module-bg       rgba(255, 255, 255, 0.12);
+@define-color border-color    rgba(255, 255, 255, 0.35);

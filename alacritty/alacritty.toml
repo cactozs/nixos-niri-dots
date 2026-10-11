@@ -1,0 +1,64 @@
+[general]
+
+# Black OLED — монохром: только #000/#fff
+
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.cursor]
+text = "#000000"
+cursor = "#ffffff"
+
+[cursor.style]
+shape = "Beam"        # "Beam", "Block", "Underline"
+blinking = "Off"      # "Never", "Off", "On", "Always"
+
+[colors.normal]
+black = "#000000"
+red = "#ffffff"
+green = "#ffffff"
+yellow = "#ffffff"
+blue = "#ffffff"
+magenta = "#ffffff"
+cyan = "#ffffff"
+white = "#ffffff"
+
+[colors.bright]
+black = "#000000"
+red = "#ffffff"
+green = "#ffffff"
+yellow = "#ffffff"
+blue = "#ffffff"
+magenta = "#ffffff"
+cyan = "#ffffff"
+white = "#ffffff"
+
+[colors.dim]
+black = "#000000"
+red = "#ffffff"
+green = "#ffffff"
+yellow = "#ffffff"
+blue = "#ffffff"
+magenta = "#ffffff"
+cyan = "#ffffff"
+white = "#ffffff"
+
+[[colors.indexed_colors]]
+index = 16
+color = "#ffffff"
+
+[[colors.indexed_colors]]
+index = 17
+color = "#ffffff"
+
+[font]
+normal.family = "JetBrains Mono"
+bold.family = "JetBrains Mono"
+italic.family = "JetBrains Mono"
+size = 11.0
+
+[window]
+opacity = 1.0
+padding.x = 12
+padding.y = 8

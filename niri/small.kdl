@@ -1,0 +1,18 @@
+hotkey-overlay {
+    hide-not-bound
+    skip-at-startup
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/%Y.%m.%d-%H:%M:%S.png"
+
+cursor {
+    xcursor-theme "breeze_cursors"
+    xcursor-size 21
+    hide-after-inactive-ms 6000
+}
+
+overview {
+    zoom 0.71
+}
